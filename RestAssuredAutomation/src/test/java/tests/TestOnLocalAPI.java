@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.*;
 
 public class TestOnLocalAPI {
 	
-	@Test
+	//@Test
 	public void get() {
 		
 		baseURI="http://localhost:3000";
@@ -35,6 +35,7 @@ public class TestOnLocalAPI {
 		when().post("/users").then().statusCode(201);
 	}
 
+
 	//@Test
 	public void put()
 	{
@@ -42,7 +43,7 @@ public class TestOnLocalAPI {
 		
 		request.put("firstName", "Birva");
 		request.put("lastName", "Shah");
-		request.put("subjectId", 3);
+		request.put("subjectId", 2);
 		
 		
 		baseURI="http://localhost:3000";
@@ -66,7 +67,7 @@ public class TestOnLocalAPI {
 		
 		given().contentType(ContentType.JSON).accept(ContentType.JSON).
 		body(request.toJSONString()).
-		when().patch("/users/4").then().statusCode(200);
+		when().patch("/users/5").then().statusCode(200);
 	}
 	
 	@Test
@@ -74,6 +75,6 @@ public class TestOnLocalAPI {
 	{
 		baseURI="http://localhost:3000";
 		
-		when().delete("/users/4").then().statusCode(200);
+		when().delete("/users/5").then().statusCode(200);
 	}
 }

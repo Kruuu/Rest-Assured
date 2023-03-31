@@ -13,7 +13,7 @@ import org.hamcrest.Matcher;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
-import static io.restassured.matcher.RestAssuredMatchers.*;
+import static io.restassured.matcher.RestAssuredMatchers.matchesXsdInClasspath;
 
 
 public class XmlSchemaValidation {

@@ -37,7 +37,7 @@ public class Test1 {
 		baseURI= "https://reqres.in/api";
 		given().get("/users?page=2").
 		then().statusCode(200).
-		body("data[1].id",equalTo(8)).
+		body("data[1].id",equalTo(8)).                                     //json path finder for json path
 		log().all();
 		
 	}
